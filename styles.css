@@ -91,7 +91,14 @@ label {
 	letter-spacing: 1px;
 }
 
+form p {
+	position: relative;
+}
+
 label::after {
+	position: absolute;
+	top: 1.5rem;
+	left: 12rem;
 	display: inline-block;
 	margin-left: 5px;
 	width: 20px;
