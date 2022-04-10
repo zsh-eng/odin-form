@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="bg-container">
+			<div class="bg-overlay">
+				<img
+					class="overlay-img"
+					src="assets/odin-lined.png"
+					alt="Website Logo"
+				/>
+				<span class="overlay-text">ODIN</span>
+			</div>
+			<img class="bg-img" src="assets/background.jpg" alt="background image" />
+		</div>
+		<div class="content-container">
+			<span class="large-text">
+				This is not a real online service! You know you need something like this
+				in your life to help you realize your deepest dreams. Sign up
+				<em>now</em> to get started. <br />
+				<br />
+				You <em>know</em> you want to.
+			</span>
+
+			<span class="large-text">Let's do this!</span>
+			<form id="signup-form">
+				<div class="form-row">
+					<p>
+						<label for="first-name">FIRST NAME</label>
+						<input name="first-name" id="first-name" required />
+						<span class="error-msg">Please enter a valid name.</span>
+					</p>
+					<p>
+						<label for="last-name">LAST NAME</label>
+						<input name="last-name" id="last-name" required />
+						<span class="error-msg">Please enter a valid name.</span>
+					</p>
+				</div>
+				<div class="form-row">
+					<p>
+						<label for="email">EMAIL</label>
+						<input name="email" id="email" type="email" required />
+						<span class="error-msg">Please enter a valid email address.</span>
+					</p>
+					<p>
+						<label for="tel">PHONE NUMBER</label>
+						<input name="tel" id="tel" type="tel" required />
+						<span class="error-msg">Please enter a valid phone number.</span>
+					</p>
+				</div>
+
+				<div class="form-row">
+					<p>
+						<label for="password">PASSWORD</label>
+						<input name="password" id="password" type="password" required />
+						<span class="error-msg">Please enter a valid password.</span>
+					</p>
+					<p>
+						<label for="confirm-password">CONFIRM PASSWORD</label>
+						<input name="confirm-password" id="confirm-password" required />
+						<span class="error-msg">Password does not match.</span>
+					</p>
+				</div>
+			</form>
+			<div class="signup-container">
+				<input type="submit" form="signup-form" value="Create Account" />
+				<span
+					>Already have an account?
+					<a href="https://google.com">Log in</a></span
+				>
+			</div>
+		</div>
+	</body>
+</html>

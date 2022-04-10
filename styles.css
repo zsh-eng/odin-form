@@ -1,0 +1,156 @@
+@font-face {
+	font-family: "Norse-Bold";
+	src: url(assets/Norse-Bold.otf);
+}
+
+:root {
+	font-family: "Helvetica";
+	--input-border-color: #e5e7eb;
+	--button-color: #596d48;
+}
+
+body {
+	display: flex;
+	margin: 0;
+}
+
+.bg-container {
+	position: relative;
+	height: 100vh;
+	width: 50vw;
+}
+
+.bg-overlay {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.overlay-text {
+	font-family: "Norse-Bold", sans-serif;
+	color: white;
+	font-size: 10vh;
+}
+
+.overlay-img {
+	height: 15vh;
+}
+
+.bg-img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.content-container,
+.signup-container,
+form p {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+
+.content-container {
+	justify-content: center;
+	width: 60vw;
+}
+
+.content-container > * {
+	padding-left: 50px;
+	padding-right: 100px;
+}
+
+.large-text {
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+form {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	padding-bottom: 1rem;
+	width: 100%;
+	box-shadow: 0 5px 5px lightgray;
+	position: relative;
+}
+
+.form-row {
+	display: flex;
+	gap: 100px;
+}
+
+label {
+	font-family: "Calibri";
+	font-size: 1rem;
+	letter-spacing: 1px;
+}
+
+label::after {
+	display: inline-block;
+	margin-left: 5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	color: white;
+	text-align: center;
+}
+
+p.valid label::after {
+	content: "✔";
+	background-color: green;
+}
+p.invalid label::after {
+	content: "✘";
+	background-color: orangered;
+}
+.error-msg {
+	height: 2rem;
+	color: red;
+	font-weight: bold;
+	font-size: 0.8rem;
+	opacity: 0;
+}
+p.invalid .error-msg {
+	opacity: 1;
+}
+
+input {
+	border: 2px solid var(--input-border-color);
+	border-radius: 10px;
+	width: 200px;
+	padding: 5px 10px;
+	font-size: 1rem;
+}
+
+input:focus {
+	outline: cyan solid 2px;
+	transition-duration: 0.2s;
+	box-shadow: 5px 5px 5px lightgray;
+}
+
+.signup-container {
+	align-items: flex-start;
+	gap: 10px;
+}
+
+input[type="submit"] {
+	background-color: var(--button-color);
+	color: white;
+	font-family: "Futura";
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.7rem 0;
+	border-radius: 0.7rem;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--button-color);
+}
